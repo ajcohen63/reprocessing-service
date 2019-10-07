@@ -1,0 +1,1043 @@
+2019-10-03 10:17:49.566  INFO 16084 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-03 10:17:49.580  INFO 16084 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-10-03 10:17:49.629  INFO 16084 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk-11.0.1\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Program Files (x86)\IBM\Client Access\Emulator;C:\Program Files (x86)\IBM\Client Access\Shared;C:\Program Files (x86)\IBM\Client Access\;C:\Program Files (x86)\Shoreline Communications\ShoreWare Client\;C:\Program Files (x86)\Shoreline Communications\ShoreWare Client\win64;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\IBM\SQLLIB\BIN;C:\IBM\SQLLIB\FUNCTION;C:\IBM\SQLLIB\SAMPLES\REPL;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\IBM\WebSphere\AppServer\bin;C:\IBM\WebSphere\AppServer\java_1.8_64\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Windows\System32\WindowsPowerShell\v1.0\;%ZOOKEEPER_HOME5\bin;%STORM_HOME%\bin;C:\Python27\;C:\Python27\li\site-pakages\;C:\Python27\Scripts\;C:\apache-maven-3.5.4\bin;C:\Program Files\TortoiseGit\bin;C:\zookeeper-3.3.6\bin;C:\Program Files\Taurus\bin;C:\gradle-5.3\bin;C:\Program Files (x86)\Yarn\bin\;C:\Program Files (x86)\nodejs\;C:\Users\acohen\scoop\shims;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\acohen\AppData\Local\atom\bin;C:\IBM\SDP91\cordova_cli;C:\gradle-4.6\bin;C:\IBM\WebSphere\AppServer\java_1.8_64\bin;C:\apache-storm-1.2.1\bin;C:\Python27\;C:\Python27\li\site-pakages\;C:\Python27\Scripts\;C:\apache-jmeter-4.0\bin;C:\apache-jmeter-4.0\lib\ext;C:\Applications\Atlassian\atlassian-plugin-sdk-6.3.12\bin;C:\apache-ant-1.10.5\bin;C:\Program Files (x86)\Nmap;;C:\spring-2.2.0.BUILD-SNAPSHOT\bin;C:\Users\acohen\AppData\Local\Yarn\bin;C:\Users\acohen\AppData\Roaming\npm;.;;.;;.]
+2019-10-03 10:17:49.983  INFO 16084 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/reprocessing]  : Initializing Spring embedded WebApplicationContext
+2019-10-03 10:17:50.767  WARN 16084 --- [localhost-startStop-1] i.m.s.reactor.netty.udp.UdpResources     : [udp] resources will use the default LoopResources: DefaultLoopResources {prefix=udp, daemon=true, selectCount=8, workerCount=8}
+2019-10-03 10:17:52.739  INFO 16084 --- [localhost-startStop-1] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[s202vmmdbea01:27017, s202vmmdbea02:27017, s202vmmdbea03:27017], mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='10000 ms', maxWaitQueueSize=500, requiredReplicaSetName='rsstage'}
+2019-10-03 10:17:52.740  INFO 16084 --- [localhost-startStop-1] org.mongodb.driver.cluster               : Adding discovered server s202vmmdbea01:27017 to client view of cluster
+2019-10-03 10:17:52.894  INFO 16084 --- [localhost-startStop-1] org.mongodb.driver.cluster               : Adding discovered server s202vmmdbea02:27017 to client view of cluster
+2019-10-03 10:17:52.895  INFO 16084 --- [localhost-startStop-1] org.mongodb.driver.cluster               : Adding discovered server s202vmmdbea03:27017 to client view of cluster
+2019-10-03 10:17:53.561  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea01:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:475016}] to s202vmmdbea01:27017
+2019-10-03 10:17:53.561  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea03:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:254203}] to s202vmmdbea03:27017
+2019-10-03 10:17:53.561  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea02:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:50622}] to s202vmmdbea02:27017
+2019-10-03 10:17:53.647  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea02:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=s202vmmdbea02:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 5]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=62299893, setName='rsstage', canonicalAddress=s202vmmdbea02.kubota-kna.com:27017, hosts=[s202vmmdbea01.kubota-kna.com:27017, s202vmmdbea03.kubota-kna.com:27017, s202vmmdbea02.kubota-kna.com:27017], passives=[], arbiters=[], primary='s202vmmdbea01.kubota-kna.com:27017', tagSet=TagSet{[]}, electionId=null, setVersion=98589, lastWriteDate=Thu Oct 03 10:17:53 CDT 2019, lastUpdateTimeNanos=6655452772944}
+2019-10-03 10:17:53.669  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea03:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=s202vmmdbea03:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 5]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=104348068, setName='rsstage', canonicalAddress=s202vmmdbea03.kubota-kna.com:27017, hosts=[s202vmmdbea01.kubota-kna.com:27017, s202vmmdbea03.kubota-kna.com:27017, s202vmmdbea02.kubota-kna.com:27017], passives=[], arbiters=[], primary='s202vmmdbea01.kubota-kna.com:27017', tagSet=TagSet{[]}, electionId=null, setVersion=98589, lastWriteDate=Thu Oct 03 10:17:53 CDT 2019, lastUpdateTimeNanos=6655475024074}
+2019-10-03 10:17:53.669  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea01:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=s202vmmdbea01:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 5]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=105147072, setName='rsstage', canonicalAddress=s202vmmdbea01.kubota-kna.com:27017, hosts=[s202vmmdbea01.kubota-kna.com:27017, s202vmmdbea03.kubota-kna.com:27017, s202vmmdbea02.kubota-kna.com:27017], passives=[], arbiters=[], primary='s202vmmdbea01.kubota-kna.com:27017', tagSet=TagSet{[]}, electionId=7fffffff000000000000001e, setVersion=98589, lastWriteDate=Thu Oct 03 10:17:53 CDT 2019, lastUpdateTimeNanos=6655475819274}
+2019-10-03 10:17:53.671  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea02:27017] org.mongodb.driver.cluster               : Adding discovered server s202vmmdbea01.kubota-kna.com:27017 to client view of cluster
+2019-10-03 10:17:53.673  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea02:27017] org.mongodb.driver.cluster               : Adding discovered server s202vmmdbea03.kubota-kna.com:27017 to client view of cluster
+2019-10-03 10:17:53.674  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea02:27017] org.mongodb.driver.cluster               : Adding discovered server s202vmmdbea02.kubota-kna.com:27017 to client view of cluster
+2019-10-03 10:17:53.675  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea02:27017] org.mongodb.driver.cluster               : Canonical address s202vmmdbea02.kubota-kna.com:27017 does not match server address.  Removing s202vmmdbea02:27017 from client view of cluster
+2019-10-03 10:17:53.684  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea01:27017] org.mongodb.driver.cluster               : Server s202vmmdbea03:27017 is no longer a member of the replica set.  Removing from client view of cluster.
+2019-10-03 10:17:53.685  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea01:27017] org.mongodb.driver.cluster               : Server s202vmmdbea01:27017 is no longer a member of the replica set.  Removing from client view of cluster.
+2019-10-03 10:17:53.685  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea01:27017] org.mongodb.driver.cluster               : Canonical address s202vmmdbea01.kubota-kna.com:27017 does not match server address.  Removing s202vmmdbea01:27017 from client view of cluster
+2019-10-03 10:17:53.940  INFO 16084 --- [localhost-startStop-1] org.mongodb.driver.cluster               : No server chosen by com.mongodb.Mongo$4@8561ebe from cluster description ClusterDescription{type=REPLICA_SET, connectionMode=MULTIPLE, serverDescriptions=[ServerDescription{address=s202vmmdbea01.kubota-kna.com:27017, type=UNKNOWN, state=CONNECTING}, ServerDescription{address=s202vmmdbea02.kubota-kna.com:27017, type=UNKNOWN, state=CONNECTING}, ServerDescription{address=s202vmmdbea03.kubota-kna.com:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 10000 ms before timing out
+2019-10-03 10:17:54.054  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea01.kubota-kna.com:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:4, serverValue:475017}] to s202vmmdbea01.kubota-kna.com:27017
+2019-10-03 10:17:54.055  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea03.kubota-kna.com:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:6, serverValue:254204}] to s202vmmdbea03.kubota-kna.com:27017
+2019-10-03 10:17:54.055  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea02.kubota-kna.com:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:5, serverValue:50623}] to s202vmmdbea02.kubota-kna.com:27017
+2019-10-03 10:17:54.105  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea01.kubota-kna.com:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=s202vmmdbea01.kubota-kna.com:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 5]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=50298086, setName='rsstage', canonicalAddress=s202vmmdbea01.kubota-kna.com:27017, hosts=[s202vmmdbea01.kubota-kna.com:27017, s202vmmdbea03.kubota-kna.com:27017, s202vmmdbea02.kubota-kna.com:27017], passives=[], arbiters=[], primary='s202vmmdbea01.kubota-kna.com:27017', tagSet=TagSet{[]}, electionId=7fffffff000000000000001e, setVersion=98589, lastWriteDate=Thu Oct 03 10:17:53 CDT 2019, lastUpdateTimeNanos=6655911062443}
+2019-10-03 10:17:54.106  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea02.kubota-kna.com:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=s202vmmdbea02.kubota-kna.com:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 5]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=50370757, setName='rsstage', canonicalAddress=s202vmmdbea02.kubota-kna.com:27017, hosts=[s202vmmdbea01.kubota-kna.com:27017, s202vmmdbea03.kubota-kna.com:27017, s202vmmdbea02.kubota-kna.com:27017], passives=[], arbiters=[], primary='s202vmmdbea01.kubota-kna.com:27017', tagSet=TagSet{[]}, electionId=null, setVersion=98589, lastWriteDate=Thu Oct 03 10:17:53 CDT 2019, lastUpdateTimeNanos=6655912286061}
+2019-10-03 10:17:54.106  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea03.kubota-kna.com:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=s202vmmdbea03.kubota-kna.com:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 5]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=50171006, setName='rsstage', canonicalAddress=s202vmmdbea03.kubota-kna.com:27017, hosts=[s202vmmdbea01.kubota-kna.com:27017, s202vmmdbea03.kubota-kna.com:27017, s202vmmdbea02.kubota-kna.com:27017], passives=[], arbiters=[], primary='s202vmmdbea01.kubota-kna.com:27017', tagSet=TagSet{[]}, electionId=null, setVersion=98589, lastWriteDate=Thu Oct 03 10:17:53 CDT 2019, lastUpdateTimeNanos=6655912081364}
+2019-10-03 10:17:54.132  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea01.kubota-kna.com:27017] org.mongodb.driver.cluster               : Setting max election id to 7fffffff000000000000001e from replica set primary s202vmmdbea01.kubota-kna.com:27017
+2019-10-03 10:17:54.132  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea01.kubota-kna.com:27017] org.mongodb.driver.cluster               : Setting max set version to 98589 from replica set primary s202vmmdbea01.kubota-kna.com:27017
+2019-10-03 10:17:54.133  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea01.kubota-kna.com:27017] org.mongodb.driver.cluster               : Discovered replica set primary s202vmmdbea01.kubota-kna.com:27017
+2019-10-03 10:17:54.578  INFO 16084 --- [localhost-startStop-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:7, serverValue:475018}] to s202vmmdbea01.kubota-kna.com:27017
+2019-10-03 10:18:04.285  INFO 16084 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-10-03 10:18:04.447  INFO 16084 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-10-03 10:18:04.634  INFO 16084 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-10-03 10:18:31.019  INFO 16084 --- [http-nio-9077-exec-1] o.a.c.c.C.[.[localhost].[/reprocessing]  : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-10-03 16:48:21.333  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea01.kubota-kna.com:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:8, serverValue:475751}] to s202vmmdbea01.kubota-kna.com:27017
+2019-10-03 16:48:21.609  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea03.kubota-kna.com:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:9, serverValue:254231}] to s202vmmdbea03.kubota-kna.com:27017
+2019-10-03 16:48:21.991  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea02.kubota-kna.com:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:10, serverValue:50650}] to s202vmmdbea02.kubota-kna.com:27017
+2019-10-03 16:50:23.493  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea01.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea01.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: No such host is known (s202vmmdbea01.kubota-kna.com)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: No such host is known (s202vmmdbea01.kubota-kna.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 16:50:23.554  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea02.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea02.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: No such host is known (s202vmmdbea02.kubota-kna.com)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: No such host is known (s202vmmdbea02.kubota-kna.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 16:50:24.510  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea03.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea03.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: No such host is known (s202vmmdbea03.kubota-kna.com)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: No such host is known (s202vmmdbea03.kubota-kna.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:00:01.549  INFO 16084 --- [pool-3-thread-1] org.mongodb.driver.cluster               : No server chosen by com.mongodb.Mongo$4@17f336e6 from cluster description ClusterDescription{type=REPLICA_SET, connectionMode=MULTIPLE, serverDescriptions=[ServerDescription{address=s202vmmdbea01.kubota-kna.com:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: No such host is known (s202vmmdbea01.kubota-kna.com)}, caused by {java.net.UnknownHostException: No such host is known (s202vmmdbea01.kubota-kna.com)}}, ServerDescription{address=s202vmmdbea02.kubota-kna.com:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: No such host is known (s202vmmdbea02.kubota-kna.com)}, caused by {java.net.UnknownHostException: No such host is known (s202vmmdbea02.kubota-kna.com)}}, ServerDescription{address=s202vmmdbea03.kubota-kna.com:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: No such host is known (s202vmmdbea03.kubota-kna.com)}, caused by {java.net.UnknownHostException: No such host is known (s202vmmdbea03.kubota-kna.com)}}]}. Waiting for 10000 ms before timing out
+2019-10-03 17:00:01.550  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea02.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea02.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: s202vmmdbea02.kubota-kna.com
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: s202vmmdbea02.kubota-kna.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:00:01.551  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea03.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea03.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: s202vmmdbea03.kubota-kna.com
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: s202vmmdbea03.kubota-kna.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:00:01.553  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea01.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea01.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: s202vmmdbea01.kubota-kna.com
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: s202vmmdbea01.kubota-kna.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:00:05.050  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea01.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea01.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: No such host is known (s202vmmdbea01.kubota-kna.com)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: No such host is known (s202vmmdbea01.kubota-kna.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:00:05.051  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea02.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea02.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: No such host is known (s202vmmdbea02.kubota-kna.com)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: No such host is known (s202vmmdbea02.kubota-kna.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:00:05.549  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea01.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea01.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: s202vmmdbea01.kubota-kna.com
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: s202vmmdbea01.kubota-kna.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:00:05.550  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea02.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea02.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: s202vmmdbea02.kubota-kna.com
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: s202vmmdbea02.kubota-kna.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:00:06.049  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea03.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea03.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: No such host is known (s202vmmdbea03.kubota-kna.com)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: No such host is known (s202vmmdbea03.kubota-kna.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:00:06.549  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea03.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea03.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: s202vmmdbea03.kubota-kna.com
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: s202vmmdbea03.kubota-kna.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:00:22.048  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea01.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea01.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: No such host is known (s202vmmdbea01.kubota-kna.com)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: No such host is known (s202vmmdbea01.kubota-kna.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:00:22.048  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea03.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea03.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: No such host is known (s202vmmdbea03.kubota-kna.com)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: No such host is known (s202vmmdbea03.kubota-kna.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:00:32.055  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea02.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea02.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: No such host is known (s202vmmdbea02.kubota-kna.com)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: No such host is known (s202vmmdbea02.kubota-kna.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:15:00.259  INFO 16084 --- [pool-3-thread-1] org.mongodb.driver.cluster               : No server chosen by com.mongodb.Mongo$4@6c4e73ab from cluster description ClusterDescription{type=REPLICA_SET, connectionMode=MULTIPLE, serverDescriptions=[ServerDescription{address=s202vmmdbea01.kubota-kna.com:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: No such host is known (s202vmmdbea01.kubota-kna.com)}, caused by {java.net.UnknownHostException: No such host is known (s202vmmdbea01.kubota-kna.com)}}, ServerDescription{address=s202vmmdbea02.kubota-kna.com:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: No such host is known (s202vmmdbea02.kubota-kna.com)}, caused by {java.net.UnknownHostException: No such host is known (s202vmmdbea02.kubota-kna.com)}}, ServerDescription{address=s202vmmdbea03.kubota-kna.com:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: No such host is known (s202vmmdbea03.kubota-kna.com)}, caused by {java.net.UnknownHostException: No such host is known (s202vmmdbea03.kubota-kna.com)}}]}. Waiting for 10000 ms before timing out
+2019-10-03 17:15:00.260  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea03.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea03.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: s202vmmdbea03.kubota-kna.com
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: s202vmmdbea03.kubota-kna.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:15:00.263  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea02.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea02.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: s202vmmdbea02.kubota-kna.com
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: s202vmmdbea02.kubota-kna.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:15:00.264  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea01.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea01.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: s202vmmdbea01.kubota-kna.com
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: s202vmmdbea01.kubota-kna.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:15:02.757  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea03.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea03.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: No such host is known (s202vmmdbea03.kubota-kna.com)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: No such host is known (s202vmmdbea03.kubota-kna.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:15:02.759  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea02.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea02.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: No such host is known (s202vmmdbea02.kubota-kna.com)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: No such host is known (s202vmmdbea02.kubota-kna.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:15:02.760  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea01.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea01.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: No such host is known (s202vmmdbea01.kubota-kna.com)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: No such host is known (s202vmmdbea01.kubota-kna.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:15:03.258  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea03.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea03.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: s202vmmdbea03.kubota-kna.com
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: s202vmmdbea03.kubota-kna.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:15:03.259  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea02.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea02.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: s202vmmdbea02.kubota-kna.com
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: s202vmmdbea02.kubota-kna.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:15:03.261  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea01.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea01.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: s202vmmdbea01.kubota-kna.com
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: s202vmmdbea01.kubota-kna.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:15:20.750  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea03.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea03.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: No such host is known (s202vmmdbea03.kubota-kna.com)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: No such host is known (s202vmmdbea03.kubota-kna.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:15:20.751  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea02.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea02.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: No such host is known (s202vmmdbea02.kubota-kna.com)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: No such host is known (s202vmmdbea02.kubota-kna.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:15:20.753  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea01.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea01.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: No such host is known (s202vmmdbea01.kubota-kna.com)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: No such host is known (s202vmmdbea01.kubota-kna.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:25:50.948  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea01.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea01.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: s202vmmdbea01.kubota-kna.com
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: s202vmmdbea01.kubota-kna.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:26:00.957  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea01.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea01.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: No such host is known (s202vmmdbea01.kubota-kna.com)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: No such host is known (s202vmmdbea01.kubota-kna.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:29:11.019  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea01.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea01.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: s202vmmdbea01.kubota-kna.com
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: s202vmmdbea01.kubota-kna.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:29:21.023  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea01.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea01.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: No such host is known (s202vmmdbea01.kubota-kna.com)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: No such host is known (s202vmmdbea01.kubota-kna.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:30:00.159  INFO 16084 --- [pool-3-thread-1] org.mongodb.driver.cluster               : No server chosen by com.mongodb.Mongo$4@321a6e9a from cluster description ClusterDescription{type=REPLICA_SET, connectionMode=MULTIPLE, serverDescriptions=[ServerDescription{address=s202vmmdbea01.kubota-kna.com:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: No such host is known (s202vmmdbea01.kubota-kna.com)}, caused by {java.net.UnknownHostException: No such host is known (s202vmmdbea01.kubota-kna.com)}}, ServerDescription{address=s202vmmdbea02.kubota-kna.com:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: No such host is known (s202vmmdbea02.kubota-kna.com)}, caused by {java.net.UnknownHostException: No such host is known (s202vmmdbea02.kubota-kna.com)}}, ServerDescription{address=s202vmmdbea03.kubota-kna.com:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: No such host is known (s202vmmdbea03.kubota-kna.com)}, caused by {java.net.UnknownHostException: No such host is known (s202vmmdbea03.kubota-kna.com)}}]}. Waiting for 10000 ms before timing out
+2019-10-03 17:30:00.160  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea01.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea01.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: s202vmmdbea01.kubota-kna.com
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: s202vmmdbea01.kubota-kna.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:30:00.160  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea03.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea03.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: s202vmmdbea03.kubota-kna.com
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: s202vmmdbea03.kubota-kna.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:30:00.161  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea02.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea02.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: s202vmmdbea02.kubota-kna.com
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: s202vmmdbea02.kubota-kna.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:30:01.160  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea01.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea01.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: No such host is known (s202vmmdbea01.kubota-kna.com)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: No such host is known (s202vmmdbea01.kubota-kna.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:30:01.161  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea02.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea02.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: No such host is known (s202vmmdbea02.kubota-kna.com)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: No such host is known (s202vmmdbea02.kubota-kna.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:30:01.161  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea03.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea03.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: No such host is known (s202vmmdbea03.kubota-kna.com)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: No such host is known (s202vmmdbea03.kubota-kna.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:30:01.660  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea01.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea01.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: s202vmmdbea01.kubota-kna.com
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: s202vmmdbea01.kubota-kna.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:30:01.660  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea03.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea03.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: s202vmmdbea03.kubota-kna.com
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: s202vmmdbea03.kubota-kna.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:30:01.661  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea02.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea02.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: s202vmmdbea02.kubota-kna.com
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: s202vmmdbea02.kubota-kna.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:30:20.651  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea02.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea02.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: No such host is known (s202vmmdbea02.kubota-kna.com)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: No such host is known (s202vmmdbea02.kubota-kna.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:30:20.652  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea03.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea03.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: No such host is known (s202vmmdbea03.kubota-kna.com)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: No such host is known (s202vmmdbea03.kubota-kna.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:30:20.655  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea01.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea01.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: No such host is known (s202vmmdbea01.kubota-kna.com)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: No such host is known (s202vmmdbea01.kubota-kna.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:30:30.655  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea03.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea03.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: s202vmmdbea03.kubota-kna.com
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: s202vmmdbea03.kubota-kna.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 17:30:40.659  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea03.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea03.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: No such host is known (s202vmmdbea03.kubota-kna.com)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: No such host is known (s202vmmdbea03.kubota-kna.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 18:41:38.593  INFO 16084 --- [pool-3-thread-1] org.mongodb.driver.cluster               : No server chosen by com.mongodb.Mongo$4@4bab467a from cluster description ClusterDescription{type=REPLICA_SET, connectionMode=MULTIPLE, serverDescriptions=[ServerDescription{address=s202vmmdbea01.kubota-kna.com:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: No such host is known (s202vmmdbea01.kubota-kna.com)}, caused by {java.net.UnknownHostException: No such host is known (s202vmmdbea01.kubota-kna.com)}}, ServerDescription{address=s202vmmdbea02.kubota-kna.com:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: No such host is known (s202vmmdbea02.kubota-kna.com)}, caused by {java.net.UnknownHostException: No such host is known (s202vmmdbea02.kubota-kna.com)}}, ServerDescription{address=s202vmmdbea03.kubota-kna.com:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: No such host is known (s202vmmdbea03.kubota-kna.com)}, caused by {java.net.UnknownHostException: No such host is known (s202vmmdbea03.kubota-kna.com)}}]}. Waiting for 10000 ms before timing out
+2019-10-03 18:41:41.162  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea02.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea02.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: s202vmmdbea02.kubota-kna.com
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: s202vmmdbea02.kubota-kna.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 18:41:41.174  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea01.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea01.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: s202vmmdbea01.kubota-kna.com
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: s202vmmdbea01.kubota-kna.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 18:41:41.196  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea03.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea03.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: s202vmmdbea03.kubota-kna.com
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: s202vmmdbea03.kubota-kna.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 18:41:58.731  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea02.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea02.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: No such host is known (s202vmmdbea02.kubota-kna.com)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: No such host is known (s202vmmdbea02.kubota-kna.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 18:41:58.825  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea03.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea03.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: No such host is known (s202vmmdbea03.kubota-kna.com)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: No such host is known (s202vmmdbea03.kubota-kna.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+
+2019-10-03 18:41:58.852  INFO 16084 --- [cluster-ClusterId{value='5d961120027b333ed41e8f5e', description='null'}-s202vmmdbea01.kubota-kna.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server s202vmmdbea01.kubota-kna.com:27017
+
+com.mongodb.MongoSocketException: No such host is known (s202vmmdbea01.kubota-kna.com)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.UnknownHostException: No such host is known (s202vmmdbea01.kubota-kna.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1248) ~[na:na]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongodb-driver-core-3.6.3.jar!/:na]
+	... 5 common frames omitted
+

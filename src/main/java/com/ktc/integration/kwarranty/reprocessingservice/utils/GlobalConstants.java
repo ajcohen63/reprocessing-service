@@ -1,0 +1,28 @@
+package com.ktc.integration.kwarranty.reprocessingservice.utils;
+
+public class GlobalConstants {
+
+    public static final String IDOC_ORDER_XPATH_EXPR  = "/ZORDEREX/IDOC/EDI_DC40/MESTYP";
+    public static final String IDOC_CUSTOMER_XPATH_EXPR  = "/ZDEBMSEX/IDOC/EDI_DC40/MESTYP";
+    public static final String IDOC_MATERIAL_XPATH_EXPR  = "/ZMATMSEX/IDOC/EDI_DC40/MESTYP";
+    public static final String IDOC_SUPPLIER_XPATH_EXPR  = "/ZCREMSEX/IDOC/EDI_DC40/MESTYP";
+    public static final String IDOC_EXTND_WARRANTY_REGN_XPATH_EXPR  = "/ZEXWT02/IDOC/EDI_DC40/MESTYP";
+    public static final String IDOC_DNT_PART_PRICING_XPATH_EXPR  = "/COND_A02/IDOC/EDI_DC40/MESTYP";
+    public static final String IDOC_SUP_PART_PRICING_XPATH_EXPR  = "/ZINFRCEX /IDOC/EDI_DC40/MESTYP";
+    public static final String IDOC_NUM_ORDER_XPATH_EXPR  = "/ZORDEREX/IDOC/EDI_DC40/DOCNUM";
+    public static final String IDOC_NUM_CUSTOMER_XPATH_EXPR  = "/ZDEBMSEX/IDOC/EDI_DC40/DOCNUM";
+    public static final String IDOC_NUM_MATERIAL_XPATH_EXPR  = "/ZMATMSEX/IDOC/EDI_DC40/DOCNUM";
+    public static final String IDOC_NUM_SUPPLIER_XPATH_EXPR  = "/ZCREMSEX/IDOC/EDI_DC40/DOCNUM";
+    public static final String IDOC_NUM_EXTND_WARRANTY_REGN_XPATH_EXPR  = "/ZEXWT02/IDOC/EDI_DC40/DOCNUM";
+    public static final String IDOC_NUM_DNT_PART_PRICING_XPATH_EXPR  = "/COND_A02/IDOC/EDI_DC40/DOCNUM";
+    public static final String IDOC_NUM_SUP_PART_PRICING_XPATH_EXPR  = "/ZINFRCEX /IDOC/EDI_DC40/DOCNUM";
+
+
+    public enum SYSTEMS_NAME {
+		SAP, BW,TAVANT
+	}
+
+	public enum REQUEST_STATUS {
+		RECEIVED,SENT_TO_KAFKA,SENT_TO_KAFKA_REPROCESS,SENT_TO_SAP,SENT_TO_TAVANT,SENT_TO_BW,COMPLETED,FAILED, FAILED_TO_SEND_KAFKA,FAILED_TO_SEND_KAFKA_REPROCESS
+	}
+}
